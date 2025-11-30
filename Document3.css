@@ -1,25 +1,41 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+#pantalla-inicio {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
-#game-container {
-    width: 80%;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+.contenedor-inicio {
+  text-align: center;
+  background: #fff8e1;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-#text {
-    margin-bottom: 20px;
+h1 {
+  font-size: 3rem;
+  color: #ff6f61;
+  margin-bottom: 1rem;
 }
 
-#options button {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
+.subtitulo {
+  font-size: 1.5rem;
+  color: #6a4e42;
+  margin-bottom: 2rem;
+}
+
+#btn-empezar {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  background: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#btn-empezar:hover {
+  background: #ff3b2e;
 }
