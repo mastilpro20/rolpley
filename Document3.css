@@ -1,5 +1,7 @@
+/* 🌟 Pantalla de inicio con imagen */
 #pantalla-inicio {
-  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  background: url("https://github.com/mastilpro20/Imagenes/blob/main/images%20(1).jpeg?raw=true") no-repeat center center;
+  background-size: cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -7,35 +9,143 @@
   font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+/* Caja central */
 .contenedor-inicio {
   text-align: center;
-  background: #fff8e1;
+  background: rgba(255, 248, 225, 0.9); /* semi-transparente para ver el fondo */
   padding: 2rem;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
 
-h1 {
+.contenedor-inicio h1 {
   font-size: 3rem;
   color: #ff6f61;
   margin-bottom: 1rem;
 }
 
-.subtitulo {
+.contenedor-inicio .subtitulo {
   font-size: 1.5rem;
   color: #6a4e42;
   margin-bottom: 2rem;
 }
 
 #btn-empezar {
-  font-size: 1.2rem;
-  padding: 0.8rem 2rem;
+  font-size: 1.5rem;
+  padding: 1rem 2.5rem;
   background: #ff6f61;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
   cursor: pointer;
+  transition: 0.3s;
 }
 #btn-empezar:hover {
   background: #ff3b2e;
+  transform: scale(1.05);
+}
+
+/* 🎮 Área principal del juego */
+main {
+  display: none; /* oculto hasta que se haga clic en "Entrar" */
+  grid-template-columns: 300px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* 📜 Ficha de personaje */
+#ficha, #chat, #mapa {
+  background: #fff8e1;
+  border: 3px solid #ff6f61;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+#ficha h2, #chat h2, #mapa h2 {
+  color: #ff3b2e;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input, textarea, select, button {
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 2px solid #ff6f61;
+  background: #fff;
+  font-size: 1rem;
+}
+
+button {
+  background: #ff6f61;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover {
+  background: #ff3b2e;
+}
+
+/* 💬 Chat */
+#chat-log {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 2px dashed #ff6f61;
+  border-radius: 10px;
+}
+
+#chat-log li {
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+#chat-log .accion {
+  background: #ffd166;
+}
+#chat-log .dialogo {
+  background: #06d6a0;
+}
+#chat-log .pensamiento {
+  background: #118ab2;
+  color: #fff;
+  font-style: italic;
+}
+
+/* 🗺️ Mapa */
+#mapa canvas {
+  border: 4px solid #ff6f61;
+  border-radius: 10px;
+  display: block;
+  margin: auto;
+  background: #c2e9fb;
+}
+
+/* 📖 Narrativa intro */
+.intro {
+  animation: aparecer 1s ease-in-out;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* 📱 Responsivo */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  .contenedor-inicio h1 {
+    font-size: 2rem;
+  }
+  #btn-empezar {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+  }
 }
